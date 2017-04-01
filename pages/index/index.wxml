@@ -1,0 +1,67 @@
+
+<!--引入-->
+
+<!--搜索-->
+<view class="search">
+  <view class="searchwrap">
+    <view class="searchicon"></view>
+    <input class="searchinput" placeholder="请输入公司/姓名/行业" />
+  </view>
+
+  <!--排序-->
+  <view class="filter" bindtap="actionSheetTap">
+    {{sortFieldTxt}}
+    <view class="downarrow"></view>
+  </view>
+</view>
+
+<!--关注/被关注-->
+<view class="payfans">
+  <view class="fanswrap" bindtap="toMyFoucs">
+    <view id="img1" class="fansimg"></view>
+    <view class="fanstxt">关注</view>
+  </view>
+  <view class="fanswrap" bindtap="toMyfans">
+    <view id="img2" class="fansimg"></view>
+    <view class="fanstxt">粉丝</view>
+  </view>
+</view>
+
+<!--列表-->
+<view class="nameul">
+
+  <!-- wx:for="{{name}}"-->
+  <view class="nameli">
+    <view class="rightArrow" bindtap=""></view>
+    <view class="avatorwrap">
+      <view class="avator">
+        <image class="avatorimg" src="{{item.avator}}"></image>
+      </view>
+
+      <!--<view class="iconV {{item.is_pass == 1 ? 'v1':'v2'}}"></view>-->
+    </view>
+    <view class="nameinfo">
+      <view class="namedetails"></view>
+        <view class="usercompany">
+          壹鸟文化
+        </view>
+    </view>
+  </view>
+</view>
+
+<!--loading-->
+<view class="more" hidden="{{moreHidden}}">
+  <image src="http://olvgf53wq.bkt.clouddn.com/WECard139266266693.gif" style="width:100%;"></image>
+</view>
+
+<!--footer-->
+
+<!--<import src="../component/footer/footer" />-->
+<template is="footer" />
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+  <block>
+    <action-sheet-item class="item" bindtap="fnSortField">综合排序</action-sheet-item>
+    <action-sheet-item class="item" bindtap="fnSortOrder">最近注册</action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
