@@ -1,7 +1,7 @@
 
 page{
   background: #efeff4;
-  padding-bottom: 140rpx;
+
 }
 /*search*/
 .search{
@@ -126,10 +126,22 @@ page{
   height: 110rpx;
 }
 .nameinfo{
-  width: auto;
+     width: auto;
     margin: 0 10rpx 0 130rpx;
     position: relative;
     height: 112rpx;
+}
+.username{
+  font-size: 38rpx;
+  color: #6fb7dc
+}
+.usercompany{
+  font-size: 32rpx;
+
+}
+.usertrade{
+   font-size: 24rpx;
+
 }
 
 

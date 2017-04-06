@@ -1,4 +1,4 @@
-// pages/myfoucs/myfoucs.js
+// pages/help/help.js
 Page({
   data:{},
   onLoad:function(options){

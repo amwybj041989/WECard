@@ -1,0 +1,67 @@
+<view class="info-title">
+  <text>个人信息</text>
+</view>
+<view>
+  <form>
+    <view class="section">
+      <view class="section__title">
+        <image src="../../res/name.png"></image>
+      </view>
+      <input  placeholder="请输入您的姓名" bindinput="updatausername" />
+    </view>
+
+    <view class="section">
+      <view class="section__title">
+        <image src="../../res/phone.png"></image>
+      </view>
+      <input type="number" placeholder="请输入您的手机号"  bindinput="updatauserphone"/>
+    </view>
+
+    <view class="section">
+      <view class="section__title">
+        <image src="../../res/email.png"></image>
+      </view>
+      <input  placeholder="请输入您的电子邮件"  bindinput="updatauseremail" />
+    </view>
+
+    <view class="section">
+      <view class="section__title">
+        <image src="../../res/company.png"></image>
+      </view>
+      <input type="text" placeholder="公司名称"  bindinput="updatcompany"/>
+    </view>
+
+    <view class="section">
+      <view class="section__title">
+        <image src="../../res/company.png"></image>
+      </view>
+      <input  placeholder="行业"  bindinput="updatabusiness"/>
+    </view>
+
+      <view class="section">
+      <view class="section__title">
+        <image src="../../res/job.png"></image>
+      </view>
+      <input  placeholder="请输入您任职务" bindinput="updatauserjob" />
+    </view>
+
+    <view class="section" bindtap="chooseAddress">
+      <view class="section__title">
+        <image src="../../res/map.png"></image>
+      </view>
+      <input type="text" placeholder="请输入您的公司地址" bindfocus="chooseAddressChange"/>
+     
+    </view>
+
+    <view class="section upload-section" bindtap="upImg">
+      <view class="section__title">
+        <image src="../../res/media.png"></image>
+      </view>
+      <input  placeholder="请上传您的头像" />
+      <image src="../../res/+.png" class="upload-photo"></image>
+    </view>
+  </form>
+</view>
+<view class="btn-area  save">
+  <button formType="submit" bindtap="submit">保存</button>
+</view>

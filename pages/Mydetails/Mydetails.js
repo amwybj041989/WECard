@@ -1,19 +1,96 @@
-// pages/Mydetails/Mydetails.js
+var app = getApp();
 Page({
-  data:{},
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+  data:{
+    user_name: "",
+     company: "",
+    mobile: "",
+    thumb: "",
+    modalHidden: true
   },
-  onReady:function(){
-    // 页面渲染完成
+  // 跳转
+  toMyfans: function () {
+    this.setData({
+      token: wx.getStorageSync('token')
+    })
+    wx.navigateTo({
+     url: '../myfans/myfans'
+       })
+},
+  toHelp: function () {
+    this.setData({
+      token: wx.getStorageSync('token')
+    });
+   wx.navigateTo({
+     url: '../help/help'
+   })
   },
-  onShow:function(){
-    // 页面显示
+  toMyFocus: function () {
+    this.setData({
+      token: wx.getStorageSync('token')
+    });
+     wx.navigateTo({
+     url: '../myfocus/myfocus'
+   })
   },
-  onHide:function(){
-    // 页面隐藏
+  toPersonEdit:function(){
+     this.setData({
+      token: wx.getStorageSync('token')
+    });
+   wx.navigateTo({
+     url: '../personEdit/personEdit'
+   })
   },
-  onUnload:function(){
-    // 页面关闭
+
+  onLoad: function (options) {
+    // 生命周期函数--监听页面加载
+
+    var router = getCurrentPages()[0].__route__;
+    console.log(router);
+    switch (router) {
+      case "pages/release/release":
+        this.setData({ isRelease: "footerOn" });
+        break;
+      case "pages/index/index":
+        this.setData({ isIndex: "footerOn" });
+        break;
+      case "pages/index/index":
+        this.setData({ isIndex: "footerOn" });
+        break;
+      case "pages/mydetails/mydetails":
+        this.setData({ isMyDetails: "footerOn" });
+        break;
+    }
+
+    let _this = this;
+    wx.request({
+      url: app.globalData.apiHost+'/mydetails',
+      data: {
+          token: wx.getStorageSync('token')
+      },
+      method: 'GET', 
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function(res){
+          if(res.data.err==1){
+              console.log("1");
+          }else{
+              _this.setData({
+                  company: res.data.data.name,
+                  user_name:res.data.data.user_name,
+                  mobile:res.data.data.mobile,
+                  thumb:res.data.data.thumb,
+                });			
+          }        
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+
   }
+
 })

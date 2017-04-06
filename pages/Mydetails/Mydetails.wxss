@@ -1,1 +1,109 @@
-/* pages/Mydetails/Mydetails.wxss */
+
+page{
+  background: #efeff4;
+
+}
+.myzoneHeader {
+  width: 100%;
+  height: 214rpx;
+  position: relative;
+  background: url(http://statics.myplas.com/myapp/img/myzoneBg.jpg) no-repeat;
+}
+
+.myzoneInfo {
+  padding: 50rpx 0 0 50rpx;
+}
+
+.avatorWrap {
+  width: 110rpx;
+  height: 110rpx;
+  float: left;
+  margin: 0;
+  position: relative;
+}
+
+.avator {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 12rpx;
+  background: url(http://statics.myplas.com/upload/16/09/02/logos.jpg) no-repeat;
+  background-size: 100% 100%;
+  float: left;
+  border: 1rpx solid #f88f5f;
+  overflow: hidden;
+}
+
+.avatorImg {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.myzonetxt {
+  margin: 0 0 0 130rpx;
+}
+.iconinfo {
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+
+.iconinfo.edit {
+  background: url(http://statics.myplas.com/myapp/img/editzone.png) no-repeat;
+  background-size: 100% 100%;
+}
+.p {
+  margin: 0;
+  font-size: 28rpx;
+  color: #6b6767;
+  height: 36rpx;
+  line-height: 36rpx;
+}
+.myzoneUl {
+  margin: 20rpx 0 0 0;
+}
+.myzoneLi {
+  width: auto;
+  height: 80rpx;
+  color: #333;
+  border-bottom: 1rpx solid #d1d1d1;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  position: relative;
+  background: #fff;
+  padding: 0 20rpx;
+}
+.iconZone {
+  width: 52rpx;
+  height: 52rpx;
+  float: left;
+  margin: 14rpx 20rpx 0 0;
+}
+.myzoneUl text {
+  float: right;
+  margin: 0 30rpx 0 0;
+  color: #999;
+  font-size: 24rpx;
+}
+.icon2 {
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  right: 0;
+  top: 18rpx;
+}
+.icon2.rightArrow {
+  background: url(http://statics.myplas.com/myapp/img/classifyBack.png) no-repeat;
+  background-size: 100% 100%;
+}
+.iconZone.zone5 {
+  background: url(http://statics.myplas.com/myapp/img/myZone6.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.iconZone.zone6 {
+  background: url(http://statics.myplas.com/myapp/img/myZone7.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.iconZone.zone10 {
+  background: url(http://statics.myplas.com/myapp/img/myZone10.png) no-repeat;
+  background-size: 100% 100%;
+}

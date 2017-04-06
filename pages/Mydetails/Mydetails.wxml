@@ -1,2 +1,47 @@
-<!--pages/Mydetails/Mydetails.wxml-->
-<text>pages/Mydetails/Mydetails.wxml</text>
+<view class="myzoneHeader">
+  <view class="myzoneInfo">
+    <view class="avatorWrap">
+      <view class="avator">
+        <image class="avatorImg" src="{{thumb}}"></image>
+      </view>
+    </view>
+    <view class="myzonetxt">
+      <view class="p">
+      <!--{{user_name}}-->
+      二货
+      </view>
+      <view class="p">
+      <!--{{company}} {{mobile}}-->
+      壹鸟 13906000514
+      </view>
+      <view class="p" bindtap="toPersonEdit">
+      <text style="float: left;">更改用户信息</text>
+      <view class="iconinfo edit"></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="myzoneUl">
+  <view class="myzoneLi" bindtap="toMyfans">
+    <view class="iconZone zone5"></view>
+    我的粉丝
+    <text>{{fans}}</text>
+    <view class="icon2 rightArrow"></view>
+  </view>
+  <view class="myzoneLi" bindtap="toMyFocus">
+    <view class="iconZone zone6"></view>
+    我的关注
+    <text>{{pay}}</text>
+    <view class="icon2 rightArrow"></view>
+  </view>
+</view>
+
+<view class="myzoneUl">
+  <view class="myzoneLi" bindtap="toHelp">
+    <view class="iconZone zone10"></view>
+    帮助
+    <text>常见问题及联系客服</text>
+    <view class="icon2 rightArrow"></view>
+  </view>
+</view>
